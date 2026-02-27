@@ -1,4 +1,3 @@
-
 # DC Motor Baremetal
 
 Operate a DC motor using a single button for “START” and “STOP” function, along with an “EMERGENCY STOP”
