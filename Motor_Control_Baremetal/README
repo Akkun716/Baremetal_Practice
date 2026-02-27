@@ -1,0 +1,67 @@
+
+# DC Motor Baremetal
+
+Operate a DC motor using a single button for “START” and “STOP” function, along with an “EMERGENCY STOP”
+button with a specific disarm action.
+
+## Overview
+
+I am building this project to learn how to power and control a DC motor using a microcontroller in a baremetal environment. The system includes a single button for starting and stopping the motor, as well as an "EMERGENCY STOP" button that immediately halts the motor's operation when pressed and illuminates a LED light to indicate the emergency state. The "EMERGENCY STOP" button is designed to ensure that the motor cannot be restarted until the "EMERGENCY STOP" button is held for 3 seconds, resetting the system.
+
+## Hardware
+
+### Components
+
+- Arduino Uno
+- Freenove DC Motor (3V)
+- AA battery source
+- 1x NPN transistor (2N2222A)
+- 1x diode (1N4001)
+- 2x push buttons
+- 1x LED
+- 1x 220Ω resistor
+- 1x 1kΩ resistor
+- Breadboard and jumper wires
+
+### Circuit Diagram
+
+*Image coming soon*
+
+### Pin Connections
+
+*Details coming soon*
+
+| Arduino Pin | Connected To       |
+|:-----------:|:------------------:|
+
+
+## Software
+
+### Key Concepts
+
+- Button debouncing (prevent false triggers from push buttons)
+- Machine state (track motor states: STOPPED, RUNNING, EMERGENCY)
+- Safety logic (emergency stop overrides all other inputs)
+- NPN transistor control (larger current control)
+- Flyback diode protection (prevent voltage spikes)
+
+## How It Works
+
+1. On system startup, the motor is in the stopped state.
+2. On pressing the "START/STOP" button, the motor powers on and will run until the "START/STOP" button is pressed again or the "EMERGENCY STOP" button is activated.
+3. If the "EMERGENCY STOP" button is pressed, a LED indicator will illuminate and the motor immediately stops and cannot be restarted until the system is reset.
+4. To reset the system after an emergency stop, the "EMERGENCY STOP" button must be held for 3 seconds, which will flash the emergency LED indicator and clear the emergency state, allowing the motor to be operated again.
+
+## Demo
+
+*Gifs coming soon*
+
+**Expected behavior:**
+- START/STOP toggles motor on/off smoothly
+- EMERGENCY STOP immediately halts motor, red LED turns on
+- Pressing START/STOP in emergency mode has no effect
+- Holding EMERGENCY STOP for 3 seconds, red LED flashes,and system is reset for normal operation.
+
+## References
+
+*Details coming soon*
