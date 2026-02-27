@@ -5,7 +5,7 @@ button with a specific disarm action.
 
 ## Overview
 
-I am building this project to learn how to power and control a DC motor using a microcontroller in a baremetal environment. The system includes a single button for starting and stopping the motor, as well as an "EMERGENCY STOP" button that immediately halts the motor's operation when pressed and illuminates a LED light to indicate the emergency state. The "EMERGENCY STOP" button is designed to ensure that the motor cannot be restarted until the "EMERGENCY STOP" button is held for 3 seconds, resetting the system.
+I am building this project to learn how to power and control a DC motor using a transistor, diode, and direct register manipulation on a microcontroller. The system includes a single button for starting and stopping the motor, as well as an "EMERGENCY STOP" button that immediately halts the motor's operation when pressed and illuminates a LED light to indicate the emergency state. The "EMERGENCY STOP" button is designed to ensure that the motor cannot be restarted until the "EMERGENCY STOP" button is held for 3 seconds, resetting the system. This project emulates the functionality of an industrial emergency stop system of a conveyor belt, providing me an educational exercise in motor control and safety features in embedded systems.
 
 ## Hardware
 
